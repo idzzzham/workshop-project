@@ -19,13 +19,6 @@
     <!-- App Css-->
     <link href="../../assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     
-    <style>
-
-        /* body {
-            min-height: 75rem;
-        } */
-
-    </style>
 </head>
 <body>
 <div class="container">

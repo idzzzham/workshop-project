@@ -31,8 +31,8 @@
                                 <p class="text-muted text-center">Sign in to continue to Lexa.</p>
                                 <form class="form-horizontal mt-4" action="../includes/login.inc.php" method="post" id="RegForm">
                                     <div class="mb-3">
-                                        <label for="username">Username</label>
-                                        <input type="text" name="uid" class="form-control" id="username" placeholder="Enter username">
+                                        <label for="username">Name</label>
+                                        <input type="text" name="uid" class="form-control" id="username" placeholder="Enter name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="userpassword">Password</label>

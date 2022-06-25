@@ -38,8 +38,8 @@
                                 <form class="form-horizontal mt-4" action="../includes/register.inc.php" method="post" id="RegForm">
 
                                     <div class="mb-3">
-                                        <label for="username">Username</label>
-                                        <input type="text" class="form-control" name="uid" placeholder="Enter username">
+                                        <label for="username">Name</label>
+                                        <input type="text" class="form-control" name="uid" placeholder="Enter name">
                                     </div>
 
                                     <div class="mb-3">

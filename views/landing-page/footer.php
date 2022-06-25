@@ -2,13 +2,16 @@
   <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
       <li class="nav-item"><a href="index.php" class="nav-link px-2 text-muted">Home</a></li>
-      <li><a href="views/landing-page/booking.php" class="nav-link px-2 link-secondary">Book Now</a></li>
         <?php
           if (isset($_SESSION["user_name"]) && $_SESSION["user_name"] == "admin") {
             echo "<li><a href='adminpanel.php' class='nav-link px-2 link-secondary'>Admin Page</a></li>";
           }
           else if (isset($_SESSION["user_name"])) {
+            echo '<li><a href="views/landing-page/booking.php" class="nav-link px-2 link-secondary">Book Now</a></li>';
             echo "<li><a class='nav-link px-2 link-secondary'>" . $_SESSION["user_name"] . "</a></li>";
+          }
+          else {
+            echo '<li><a href="views/auth/login.php" class="nav-link px-2 link-secondary">Book Now</a></li>';
           }
         ?>
       <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>

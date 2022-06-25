@@ -37,13 +37,16 @@
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a href="../../index.php" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="views/landing-page/booking.php" class="nav-link px-2 link-secondary">Book Now</a></li>
         <?php
             if (isset($_SESSION["user_name"]) && $_SESSION["user_name"] == "admin") {
               echo "<li><a href='views/landing-page/admin.php' class='nav-link px-2 link-secondary'>Admin</a></li>";
             }
             else if (isset($_SESSION["user_name"])) {
+              echo '<li><a href="views/landing-page/booking.php" class="nav-link px-2 link-secondary">Book Now</a></li>';
               echo "<li><a class='nav-link px-2 link-secondary'>" . $_SESSION["user_name"] . "</a></li>";
+            }
+            else {
+              echo '<li><a href="views/auth/login.php" class="nav-link px-2 link-secondary">Book Now</a></li>';
             }
             ?>
         <!-- <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
@@ -53,6 +56,9 @@
       </ul>
 
       <div class="col-md-3 text-end">
+        <a href="views/landing-page/cart.php">
+          <img style="height: 40px; width: 40px;" src="assets/images/cart.png" alt="" class="mx-auto me-2">
+        </a>
         <?php
           if (isset($_SESSION["user_name"]) && $_SESSION["user_name"] == "admin") {
             echo '<a type="button" class="btn btn-primary me-2" href="views/includes/logout.inc.php">Log Out</a>';
