@@ -47,6 +47,9 @@
       </ul>
 
       <div class="col-md-3 text-end">
+        <a href="cart.php">
+          <img style="height: 40px; width: 40px;" src="../../assets/images/cart.png" alt="" class="mx-auto me-2">
+        </a>
         <a type="button" class="btn btn-primary me-2" href="../includes/logout.inc.php">Log Out</a>
       </div>
     </header>

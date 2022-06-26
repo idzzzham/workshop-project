@@ -37,6 +37,13 @@
             if ($insert_Result) {
                 if (mysqli_affected_rows($conn) > 0) {
                     // echo '<script>alert("Data Inserted")</script>';
+                    $court_query = "UPDATE courts  
+                    SET court_price = CASE court_type  
+                    WHEN 'Wooden' THEN '12'  
+                    WHEN 'Synthetic' THEN '15'  
+                    ELSE '0'
+                    END";
+                    $update_result = mysqli_query($conn, $court_query);
                 }
                 else {
                     echo '<script>alert("Data Not Inserted")</script>';
@@ -113,7 +120,7 @@
                             <form class="form-control-sm mt-2" action="admin.php" method="post">
                                 <div class="text-center">
                                 <?php
-                                    if($row["court_type"] == "Wooden Court") {
+                                    if($row["court_type"] == "Wooden") {
                                 ?>
                                         <img src="../../assets/images/wooden-court.png" style="width: 50%;">
                                         <p>Court <?php echo $row["court_name"] ?> : <?php echo $row["court_type"] ?><p>
@@ -122,15 +129,15 @@
                                         <input class="form-control form-control-sm" type="text" name="name" value="<?php $row['court_name'] ?>" placeholder="Change court name">
                                         <select class="form-control form-control-sm" name="type" style="margin-top:5px;">
                                             <option>Change Court Type</option>
-                                            <option name="type" value="Wooden Court">Wooden Court</option>
-                                            <option name="type" value="Synthetic Court">Synthetic Court</option>
+                                            <option name="type" value="Wooden">Wooden Court</option>
+                                            <option name="type" value="Synthetic">Synthetic Court</option>
                                         </select>
                                         <div class="mt-4 d-grid gap-2 justify-content-md-center">
                                             <button type="submit" name="update" class="btn btn-outline-primary w-md">Update</button>
                                             <button type="submit" name="delete" class="btn btn-outline-primary w-md">Delete</button>
                                         </div> 
                                 <?php
-                                    } else if($row["court_type"] == "Synthetic Court") {
+                                    } else if($row["court_type"] == "Synthetic") {
                                 ?>
                                         <img src="../../assets/images/badminton-court.png" style="width: 50%;">
                                         <p>Court <?php echo $row["court_name"] ?> : <?php echo $row["court_type"] ?><p>
@@ -139,8 +146,8 @@
                                         <input class="form-control form-control-sm" type="text" name="name" value="<?php $row['court_name'] ?>" placeholder="Change court name">
                                         <select class="form-control form-control-sm" name="type" style="margin-top:5px;">
                                             <option>Change Court Type</option>
-                                            <option name="type" value="Wooden Court">Wooden Court</option>
-                                            <option name="type" value="Synthetic Court">Synthetic Court</option>
+                                            <option name="type" value="Wooden">Wooden Court</option>
+                                            <option name="type" value="Synthetic">Synthetic Court</option>
                                         </select>
                                         <div class="mt-4 d-grid gap-2 justify-content-md-center">
                                             <button type="submit" name="update" class="btn btn-outline-primary w-md">Update</button>
@@ -186,8 +193,46 @@
                             <div class="col-md-10">
                                 <select class="form-control" name="type">
                                     <option>Select</option>
-                                    <option name="type" value="Wooden Court">Wooden Court</option>
-                                    <option name="type" value="Synthetic Court">Synthetic Court</option>
+                                    <option name="type" value="Wooden">Wooden Court</option>
+                                    <option name="type" value="Synthetic">Synthetic Court</option>
+                                </select>
+                            </div>
+                        </div><!-- end row -->
+                        <div class="mt-4 d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" name="insert" class="btn btn-outline-primary w-md">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end row -->
+</div>
+
+<!-- edit price -->
+<div class="container" style="margin-top: 25px;">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Edit Price</h4>
+                    <form class="form-horizontal mt-3" action="admin.php" method="post">
+                        <input type="hidden" name="id" placeholder="Court ID" value="<?php echo $id ?>">
+                        <input type="hidden" name="status" placeholder="Court Status" value="0">
+                        <div class="mb-3 row">
+                            <label for="example-number-input" class="col-md-2 col-form-label">Court Name</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" name="name" value="<?php echo $name ?>">
+                            </div>
+                        </div><!-- end row -->
+                        <div class="mb-3 row">
+                            <label class="col-md-2 col-form-label">Court Type</label>
+                            <div class="col-md-10">
+                                <select class="form-control" name="type">
+                                    <option>Select</option>
+                                    <option name="type" value="Wooden">Wooden Court</option>
+                                    <option name="type" value="Synthetic">Synthetic Court</option>
                                 </select>
                             </div>
                         </div><!-- end row -->
