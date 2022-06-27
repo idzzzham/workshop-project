@@ -27,8 +27,8 @@
                                 </a>
                             </h3>
                             <div class="p-3">
-                                <h4 class="text-muted font-size-18 mb-1 text-center">Welcome Back !</h4>
-                                <p class="text-muted text-center">Sign in to continue to Lexa.</p>
+                                <h4 class="text-muted font-size-18 mb-1 text-center">Welcome !</h4>
+                                <p class="text-muted text-center">Sign in to continue to TUAH Badminton</p>
                                 <form class="form-horizontal mt-4" action="../includes/login.inc.php" method="post" id="RegForm">
                                     <div class="mb-3">
                                         <label for="username">Name</label>
@@ -43,18 +43,13 @@
                                             <button class="btn btn-primary w-md waves-effect waves-light" type="submit" name="submit">Log In</button>
                                         </div>
                                     </div>
-                                    <div class="form-group mb-0 row">
-                                        <div class="col-12 mt-4">
-                                            <a href="pages-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i> Forgot your password?</a>
-                                        </div>
-                                    </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                     <div class="mt-4 text-center">
                         <p>Don't have an account ? <a href="register.php" class="text-primary"> Register Now </a></p>
-                        © <script>document.write(new Date().getFullYear())</script> Idzham <span class="d-none d-sm-inline-block"><i class="mdi mdi-heart text-danger"></i></span>
+                        © <script>document.write(new Date().getFullYear())</script> Idzham <span class="d-none d-sm-inline-block"></span>
                     </div>
                 </div>
             </div>

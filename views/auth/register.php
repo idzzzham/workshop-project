@@ -29,7 +29,7 @@
                         <div class="card-body pt-0">
                             <h3 class="text-center mt-5 mb-4">
                                 <a href="/" class="d-block auth-logo">
-                                    <img style="height: 100px; width: auto;" src="/assets/images/logo.png" alt="">
+                                    <img style="height: 100px; width: auto;" src="../../assets/images/logo.png" alt="">
                                 </a>
                             </h3>
                             <div class="p-3">
@@ -93,7 +93,7 @@
                     </div>
                     <div class="mt-4 text-center">
                         <p>Already have an account ? <a href="login.php" class="text-primary"> Login </a> </p>
-                        © <script>document.write(new Date().getFullYear())</script> Idzham <span class="d-none d-sm-inline-block"><i class="mdi mdi-heart text-danger"></i></span>
+                        © <script>document.write(new Date().getFullYear())</script> Idzham <span class="d-none d-sm-inline-block"></span>
                     </div>
                 </div>
             </div>

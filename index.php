@@ -25,8 +25,14 @@
     <div class="card" style="border:none;">
         <img src="assets/images/banner.jpg" class="card-img-top" alt="...">
         <div class="card-body text-center">
-            <h4 class="card-title">About Us</h4>
-            <p>Welcome to Jebat Racquet official website.</p>
+            <h4 class="card-title">Welcome to TUAH Badminton official website.</h4>
+            <h6>Monday to Sunday</h6>
+            <h6>Open from 11am - 12am</h6>
+            <h6>Wooden court: RM12.00/hour</h6>
+            <h6>Synthetic court:RM15.00/hour</h6>
+            <h6>**Deposit RM10 and make sure to click complete button after play**</h6>
+            <h6>*Racquet rental service provided at the counter*</h6>
+            <p>Any further enquiry kindly contact us at 012-3456789</p>
         </div>
     </div>
 </div>
